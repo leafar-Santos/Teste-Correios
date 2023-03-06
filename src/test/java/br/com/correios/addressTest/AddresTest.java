@@ -16,8 +16,6 @@ public class AddresTest extends BaseTestClass {
 		addresPage = new AddresPage();
 		accessScreenSearchZipCode();
 	}
-
-
 	/**
 	 * Execução de dos testes e validação por ID
 	 * @throws InterruptedException

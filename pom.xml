@@ -71,7 +71,6 @@
 
 
 
-
     </dependencies>
     <build>
         <plugins>
@@ -101,6 +100,13 @@
                         <artifactId>aspectjweaver</artifactId>
                         <version>${aspectj.version}</version>
                     </dependency>
+
+                    <dependency>
+                        <groupId>io.github.eroshenkoam</groupId>
+                        <artifactId>allure-pdf</artifactId>
+                        <version>1.4.0</version>
+                    </dependency>
+
                 </dependencies>
             </plugin>
             <plugin>

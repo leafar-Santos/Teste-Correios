@@ -17,9 +17,7 @@ public class TrackingTest extends BaseTestClass {
 	public void starTest(){
 		trackingPage = new TrackingPage();
 		accessScreenSearchTracking();
-
 	}
-
 
 	/**
      * Execução de dos testes e validação por ID
@@ -36,7 +34,6 @@ public class TrackingTest extends BaseTestClass {
 		trackingPage.validateInfomrmedCodeByID(INVALID_TRACKING_CODE);
 		trackingPage.clickSearchByID();
 		trackingPage.validateMessageError();
-
 	}
 
 	/**
@@ -72,9 +69,7 @@ public class TrackingTest extends BaseTestClass {
 		trackingPage.validateInfomrmedCodeByXpath(INVALID_TRACKING_CODE);
 		trackingPage.clickSerachByXpath();
 		trackingPage.validateMessageErrorByXpath();
-
 	}
-
 
 }
 
