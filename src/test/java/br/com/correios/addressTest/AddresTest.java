@@ -10,7 +10,7 @@ import static br.com.correios.pages.AddresPage.accessScreenSearchZipCode;
 public class AddresTest extends BaseTestClass {
 
 	private static AddresPage addresPage;
-	
+
 	@BeforeEach
 	public void starTest(){
 		addresPage = new AddresPage();
