@@ -9,6 +9,8 @@ import static br.com.correios.utils.TakeScreenShot.takeScreenShot;
 
 public class BaseTestClass {
 
+
+    
     @AfterEach
     @DisplayName("Evidência do teste")
     public void screenshoot_test(){
