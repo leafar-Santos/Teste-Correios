@@ -11,7 +11,7 @@ public class BaseTestClass {
 
     @AfterEach
     @DisplayName("Evidência do teste")
-    public void screenshoot_test() throws IOException {
+    public void screenshoot_test(){
         takeScreenShot();
     }
 
