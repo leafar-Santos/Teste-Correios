@@ -20,12 +20,7 @@ public class AddresTest extends BaseTestClass {
 	 * Execução de dos testes e validação por ID
 	 * @throws InterruptedException
 	 */
-
-
-
-
-
-
+	
 	@Test
 	@Description("Validate BY ID"  +
 			"Enter the post office website; " +
