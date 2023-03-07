@@ -30,7 +30,7 @@ public class AllureTest{
 			"Returns to the home screen; ")
 	@DisplayName("Busca e valida CEP por ID")
 	@Severity(SeverityLevel.CRITICAL)
-	
+
 	public void mustSearchValidZipCodeSelectingOptionLogradouroByID() throws InterruptedException {
 
 
