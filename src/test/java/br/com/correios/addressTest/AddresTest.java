@@ -9,6 +9,8 @@ import static br.com.correios.pages.AddresPage.accessScreenSearchZipCode;
 @DisplayName("Performs validations search screen for zip code Post Office")
 public class AddresTest extends BaseTestClass {
 
+
+
 	private static AddresPage addresPage;
 
 	@BeforeEach
