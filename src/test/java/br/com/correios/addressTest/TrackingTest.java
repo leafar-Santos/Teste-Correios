@@ -2,12 +2,9 @@ package br.com.correios.addressTest;
 import br.com.correios.core.BaseTestClass;
 import br.com.correios.pages.TrackingPage;
 import io.qameta.allure.*;
-import org.junit.experimental.categories.Category;
 import org.junit.jupiter.api.*;
-import java.io.IOException;
 import static br.com.correios.addressTest.dataTrackingPage.DataTracking.INVALID_TRACKING_CODE;
 import static br.com.correios.pages.TrackingPage.accessScreenSearchTracking;
-
 
 @DisplayName("Performs validations search screen for Tracking code")
 public class TrackingTest extends BaseTestClass {
