@@ -39,7 +39,7 @@ public class TrackingTest extends BaseTestClass {
 	@DisplayName("Busca e valida Cóigo de rastrio por ID")
 	@Severity(SeverityLevel.CRITICAL)
 	public void mustSearchValidZipCodeSelectingOptionLogradouroByID() throws InterruptedException{
-		trackingPage.informCodeById("INVALID_TRACKING_CODE");
+		trackingPage.informCodeById(INVALID_TRACKING_CODE);
 		trackingPage.validateInfomrmedCodeByID(INVALID_TRACKING_CODE);
 		trackingPage.clickSearchByID();
 		trackingPage.validateMessageError();
