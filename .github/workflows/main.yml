@@ -31,7 +31,7 @@ jobs:
         run: mvn test
         continue-on-error: true
         
-        - name: Run allure
+      - name: Run allure
         if: always()
         run: allure generate
         continue-on-error: true
