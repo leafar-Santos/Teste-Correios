@@ -2,6 +2,7 @@ package br.com.correios.addressTest;
 import br.com.correios.core.BaseTestClass;
 import br.com.correios.pages.TrackingPage;
 import io.qameta.allure.*;
+import org.junit.experimental.categories.Category;
 import org.junit.jupiter.api.*;
 import java.io.IOException;
 import static br.com.correios.addressTest.dataTrackingPage.DataTracking.INVALID_TRACKING_CODE;
@@ -37,8 +38,8 @@ public class TrackingTest extends BaseTestClass {
 			"Confirm that the code is incorrect and close the browser;")
 	@DisplayName("Busca e valida Cóigo de rastrio por ID")
 	@Severity(SeverityLevel.CRITICAL)
-	public void mustSearchValidZipCodeSelectingOptionLogradouroByID() throws InterruptedException, IOException {
-		trackingPage.informCodeById(INVALID_TRACKING_CODE);
+	public void mustSearchValidZipCodeSelectingOptionLogradouroByID() throws InterruptedException{
+		trackingPage.informCodeById("INVALID_TRACKING_CODE");
 		trackingPage.validateInfomrmedCodeByID(INVALID_TRACKING_CODE);
 		trackingPage.clickSearchByID();
 		trackingPage.validateMessageError();
