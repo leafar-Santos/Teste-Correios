@@ -8,7 +8,6 @@ import java.io.IOException;
 import static br.com.correios.addressTest.dataTrackingPage.DataTracking.INVALID_TRACKING_CODE;
 import static br.com.correios.pages.TrackingPage.accessScreenSearchTracking;
 
-
 @DisplayName("Performs validations search screen for Tracking code")
 public class TrackingTest extends BaseTestClass {
 
