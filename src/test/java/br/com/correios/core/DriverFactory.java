@@ -4,6 +4,9 @@ import org.openqa.selenium.Dimension;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.remote.http.ClientConfig;
+
+import java.time.Duration;
 
 public class DriverFactory {
 
@@ -15,12 +18,10 @@ public class DriverFactory {
 
 		if (driver == null) {
 			ChromeOptions options = new ChromeOptions().setHeadless(true);
+
 			driver = new ChromeDriver(options);
-			System.setProperty("webdriver.chrome.driver", "src/test/resources/webdriver/chromedriver");
-			options.addArguments("--headless=new"); //should be enabled for Jenkins
-			options.addArguments("--no-sandbox");//should be enabled for Jenkins
-			options.addArguments("--disable-dev-shm-usage"); //should be enabled for Jenkins
-			System.setProperty("webdriver.chrome.whitelistedIps", "127.0.0.1");
+			//System.setProperty("webdriver.chrome.driver", "src/test/resources/webdriver/chromedriver");
+			System.setProperty("webdriver.chrome.driver", "/home/rafael/webdriver/chromedriver");
 			driver.manage().window().setSize(new Dimension(1200,765));
 
 		}
