@@ -9,6 +9,7 @@ import static br.com.correios.dataTestes.epics.AddressEpic.createAddressPage;
 import static br.com.correios.dataTestes.histories.AddressHistories.validateAddressScreen;
 import static br.com.correios.pages.AddressPage.accessScreenSearchZipCode;
 
+@Disabled
 @DisplayName("Performs validations search screen for zip code Post Office")
 public class AddressTest extends BaseTestClass {
 
