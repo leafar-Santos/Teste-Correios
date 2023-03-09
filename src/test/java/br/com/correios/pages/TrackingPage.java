@@ -3,7 +3,7 @@ import br.com.correios.core.BasePage;
 import br.com.correios.core.Urls;
 import static br.com.correios.pages.dataFieldsPage.DataTrackingElements.*;
 import static br.com.correios.core.DriverFactory.getDriver;
-import static br.com.correios.addressTest.dataTrackingPage.DataTrackingPage.TRACKING_MESSAGE_ERROR;
+import static br.com.correios.address.dataTrackingPage.DataTrackingPage.TRACKING_MESSAGE_ERROR;
 import static java.lang.Thread.sleep;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
