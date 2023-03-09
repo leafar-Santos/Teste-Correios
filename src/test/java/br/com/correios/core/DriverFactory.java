@@ -16,6 +16,7 @@ public class DriverFactory {
 	}
 	public static WebDriver getDriver() {
 
+		
 		if (driver == null) {
 			ChromeOptions options = new ChromeOptions().setHeadless(true);
 
