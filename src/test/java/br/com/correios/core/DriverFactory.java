@@ -20,8 +20,8 @@ public class DriverFactory {
 			ChromeOptions options = new ChromeOptions().setHeadless(true);
 
 			driver = new ChromeDriver(options);
-			//System.setProperty("webdriver.chrome.driver", "src/test/resources/webdriver/chromedriver");
-			System.setProperty("webdriver.chrome.driver", "/home/rafael/webdriver/chromedriver");
+			options.addArguments("--no-sandbox");
+			System.setProperty("webdriver.chrome.driver", "src/test/resources/webdriver/chromedriver");
 			driver.manage().window().setSize(new Dimension(1200,765));
 
 		}
