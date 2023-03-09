@@ -29,7 +29,6 @@ public class DriverFactory {
 			options.addArguments("--remote-allow-origins=*");
 			options.addArguments("--headless");
 			driver = new ChromeDriver(options);
-
 			driver.manage().window().setSize(new Dimension(1200,765));
 
 		}
