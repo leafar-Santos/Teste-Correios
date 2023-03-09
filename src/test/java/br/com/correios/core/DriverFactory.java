@@ -21,8 +21,11 @@ public class DriverFactory {
 
 			driver = new ChromeDriver(options);
 			options.addArguments("--no-sandbox");
+			options.addArguments("--headless"); //!!!should be enabled for Jenkins
+			options.addArguments("--disable-dev-shm-usage"); //!!!should be enabled for Jenkins
+			options.addArguments("--window-size=1920x1080"); //!!!should be enabled for Jenkins
 			//System.setProperty("webdriver.chrome.driver", "src/test/resources/webdriver/chromedriver");
-			//System.setProperty("webdriver.chrome.driver", "/home/rafael/webdriver/chromedriver");
+
 			driver.manage().window().setSize(new Dimension(1200,765));
 
 		}
