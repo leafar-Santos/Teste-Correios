@@ -65,7 +65,7 @@ public class TrackingTest extends BaseTestClass {
 	@DisplayName("Busca e valida Cóigo de rastrio por CSS Selector")
 	@Severity(SeverityLevel.MINOR)
 	public void mustSearchValidZipCodeSelectingOptionLogradouroByCssSelector() throws InterruptedException {
-		trackingPage.informCodeByCssSelector("INVALID_TRACKING_CODE");
+		trackingPage.informCodeByCssSelector(INVALID_TRACKING_CODE);
 		trackingPage.validateInfomrmedCodeByCssSelector(INVALID_TRACKING_CODE);
 		trackingPage.clickSearchByCssSelector();
 		trackingPage.validateMessageErrorByCssSelector();
@@ -91,7 +91,7 @@ public class TrackingTest extends BaseTestClass {
 			"Confirm that the code is incorrect and close the browser;")
 	@DisplayName("Busca e valida Cóigo de rastrio por XPATH")
 	public void mustSearchValidZipCodeSelectingOptionLogradouroByXpath() throws InterruptedException {
-		trackingPage.informCodeByXpath("INVALID_TRACKING_CODE");
+		trackingPage.informCodeByXpath(INVALID_TRACKING_CODE );
 		trackingPage.validateInfomrmedCodeByXpath(INVALID_TRACKING_CODE);
 		trackingPage.clickSerachByXpath();
 		trackingPage.validateMessageErrorByXpath();

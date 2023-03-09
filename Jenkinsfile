@@ -12,18 +12,21 @@ pipeline{
             }
         }
         
-        stage('Fim'){
-            steps{
-                sleep(5)
-                sh 'echo Fim'
-            }
-        }
-    }
-    post{
-        always{
+        stage('Gerando Relatório'){
+            post{
+            always{
                 script {
                 allure includeProperties: false, jdk: '', results: [[path: 'allure-results']]
             }
         }
     }
+        }
+     stage('Fim da execução'){
+            steps{
+                sh 'mvn clean test'
+            }
+        }
+
+    }
+    
 }
