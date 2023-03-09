@@ -6,9 +6,14 @@ pipeline{
                 sh 'echo inicio'
             }
         }
-        stage('Meio'){
+        stage('Testes Funcionais Sellenium'){
             steps{
                 sh 'mvn clean test'
+            }
+        }
+        stage('Criando Relatório'){
+            steps{
+                sh 'cp -r allure-report/history/ allure-results'
             }
         }
 
