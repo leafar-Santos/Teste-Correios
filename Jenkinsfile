@@ -26,7 +26,6 @@ pipeline{
     }
     post{
         always{
-            stage('Gerar Report') {
             steps {
                 script {
                     allure([
@@ -39,7 +38,6 @@ pipeline{
         }
     }
 }
-        }
     }
 
 }
