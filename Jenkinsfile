@@ -12,11 +12,6 @@ pipeline{
             }
         }           
 }
-     stage('Fim da execução'){
-            steps{
-                sh 'mvn clean test'
-            }
-        }
         post{
             always{
                 script {
