@@ -16,11 +16,11 @@ public class DriverFactory {
 		if (driver == null) {
 			ChromeOptions options = new ChromeOptions().setHeadless(true);
 			driver = new ChromeDriver(options);
-			options.addArguments("--headless"); //should be enabled for Jenkins
+
+			System.setProperty("webdriver.chrome.driver", "src/test/resources/webdriver/chromedriver");
+			options.addArguments("--headless=new"); //should be enabled for Jenkins
 			options.addArguments("--no-sandbox");//should be enabled for Jenkins
 			options.addArguments("--disable-dev-shm-usage"); //should be enabled for Jenkins
-			options.setExperimentalOption("useAutomationExtension", false);
-			System.setProperty("webdriver.chrome.driver", "src/test/resources/webdriver/chromedriver");
 			driver.manage().window().setSize(new Dimension(1200,765));
 
 		}
