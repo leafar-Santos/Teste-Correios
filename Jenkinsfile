@@ -11,7 +11,10 @@ pipeline{
                 sh 'mvn clean test'
             }
         }
-        stage('reports') {
+        stage('Gerar Relatório') {
+            steps{
+                sh 'cp -r allure-report/history/ allure-results'
+            }
             steps {
                 script {
                     allure([
