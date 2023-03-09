@@ -8,7 +8,7 @@ pipeline{
         }
         stage('Meio'){
             steps{
-                sh 'echo Meio'
+                sh 'mvn clean test'
             }
         }
         stage('Fim'){
