@@ -8,7 +8,7 @@ pipeline{
         }
         stage('Meio'){
             steps{
-                sh 'mvn clean install'
+                sh 'mvn clean package'
             }
         }
         stage('Fim'){
