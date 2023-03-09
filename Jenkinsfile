@@ -8,7 +8,9 @@ pipeline{
         }
         stage('Meio'){
             steps{
-                mvn clean test
+                step{
+                    sh mvn clean test
+                }
             }
         }
 
