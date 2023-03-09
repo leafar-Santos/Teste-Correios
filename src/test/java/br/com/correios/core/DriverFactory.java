@@ -16,13 +16,13 @@ public class DriverFactory {
 	}
 	public static WebDriver getDriver() {
 
-		
 		if (driver == null) {
 			ChromeOptions options = new ChromeOptions().setHeadless(true);
 
 			driver = new ChromeDriver(options);
 			options.addArguments("--no-sandbox");
-			System.setProperty("webdriver.chrome.driver", "src/test/resources/webdriver/chromedriver");
+			//System.setProperty("webdriver.chrome.driver", "src/test/resources/webdriver/chromedriver");
+			//System.setProperty("webdriver.chrome.driver", "/home/rafael/webdriver/chromedriver");
 			driver.manage().window().setSize(new Dimension(1200,765));
 
 		}
