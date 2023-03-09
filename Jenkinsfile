@@ -11,11 +11,6 @@ pipeline{
                 sh 'mvn clean test'
             }
         }
-        stage('Obtendo Dados'){
-            steps{
-                sh 'cp -r allure-report/history/ allure-results'
-            }
-        }
         
         stage('Fim'){
             steps{
@@ -27,6 +22,7 @@ pipeline{
     post{
         always{
             steps {
+                sh 'cp -r allure-report/history/ allure-results'
                 script {
                     allure([
                         includeProperties: false,
