@@ -4,6 +4,8 @@ import org.openqa.selenium.Dimension;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.remote.http.ClientConfig;
 
 import java.time.Duration;
@@ -17,16 +19,15 @@ public class DriverFactory {
 	public static WebDriver getDriver() {
 
 		if (driver == null) {
-			ChromeOptions options = new ChromeOptions().setHeadless(true);
 
+			System.setProperty("webdriver.chrome.driver", "src/test/resources/webdriver/chromedriver");
+			ChromeOptions options = new ChromeOptions();
+			options.setHeadless(true);
+			options.addArguments("--remote-allow-origins=*");
 			driver = new ChromeDriver(options);
-			options.addArguments("--no-sandbox");
-			options.addArguments("--headless"); //!!!should be enabled for Jenkins
-			options.addArguments("--disable-dev-shm-usage"); //!!!should be enabled for Jenkins
-			options.addArguments("--window-size=1920x1080"); //!!!should be enabled for Jenkins
-			//System.setProperty("webdriver.chrome.driver", "src/test/resources/webdriver/chromedriver");
 
 			driver.manage().window().setSize(new Dimension(1200,765));
+
 
 		}
 		return driver;
