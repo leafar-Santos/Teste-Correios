@@ -21,6 +21,7 @@ public class DriverFactory {
 			options.addArguments("--headless=new"); //should be enabled for Jenkins
 			options.addArguments("--no-sandbox");//should be enabled for Jenkins
 			options.addArguments("--disable-dev-shm-usage"); //should be enabled for Jenkins
+			System.setProperty("webdriver.chrome.whitelistedIps", "");
 			driver.manage().window().setSize(new Dimension(1200,765));
 
 		}
