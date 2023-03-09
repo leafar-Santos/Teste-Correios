@@ -11,12 +11,19 @@ pipeline{
                 sh 'mvn clean test'
             }
         }
-        stage('Criando Relatório'){
-            steps{
-                sh 'cp -r allure-report/history/ allure-results'
-            }
+        stage('reports') {
+            steps {
+                script {
+                    allure([
+                        includeProperties: false,
+                        jdk: '',
+                        properties: [],
+                        reportBuildPolicy: 'ALWAYS',
+                        results: [[path: 'target/allure-results']]
+            ])
         }
-
+    }
+}
         stage('Fim'){
             steps{
                 sleep(5)
@@ -24,4 +31,5 @@ pipeline{
             }
         }
     }
+
 }
