@@ -6,11 +6,6 @@ pipeline{
                 sh 'echo inicio'
             }
         }
-        stage('Verifica Java_Home'){
-            steps{
-                sh '${JAVA_HOME}/usr/lib/jvm/default-java/bin'
-            }
-        }
         stage('Meio'){
             steps{
                 sh mvn clean test
