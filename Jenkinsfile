@@ -13,14 +13,17 @@ pipeline{
         }
         
         stage('Gerando Relatório'){
-            post{
+            steps{post{
             always{
                 script {
                 allure includeProperties: false, jdk: '', results: [[path: 'allure-results']]
             }
         }
     }
-        }
+
+            }
+            
+}
      stage('Fim da execução'){
             steps{
                 sh 'mvn clean test'
