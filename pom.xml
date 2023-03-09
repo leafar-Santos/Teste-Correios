@@ -55,6 +55,12 @@
             <version>4.8.1</version>
         </dependency>
 
+        <dependency>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-compiler-plugin</artifactId>
+            <version>3.11.0</version>
+        </dependency>
+
 
         <!-- Dependencias JUnit4 -->
         <dependency>
@@ -68,7 +74,6 @@
             <artifactId>junit-platform-runner</artifactId>
             <version>1.9.2</version>
         </dependency>
-
 
 
     </dependencies>
@@ -117,6 +122,7 @@
                     <reportVersion>2.4.1</reportVersion>
                 </configuration>
             </plugin>
+
         </plugins>
     </build>
 
