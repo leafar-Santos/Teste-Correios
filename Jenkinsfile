@@ -16,7 +16,17 @@ pipeline{
                 sh 'cp -r allure-report/history/ allure-results'
             }
         }
-        stage('Gerar Report') {
+        
+        stage('Fim'){
+            steps{
+                sleep(5)
+                sh 'echo Fim'
+            }
+        }
+    }
+    post{
+        always{
+            stage('Gerar Report') {
             steps {
                 script {
                     allure([
@@ -29,11 +39,6 @@ pipeline{
         }
     }
 }
-        stage('Fim'){
-            steps{
-                sleep(5)
-                sh 'echo Fim'
-            }
         }
     }
 

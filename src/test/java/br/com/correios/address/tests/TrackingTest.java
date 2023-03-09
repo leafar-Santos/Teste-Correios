@@ -39,7 +39,7 @@ public class TrackingTest extends BaseTestClass {
 	@DisplayName("Busca e valida Cóigo de rastrio por ID")
 	@Severity(SeverityLevel.CRITICAL)
 	public void mustSearchValidZipCodeSelectingOptionLogradouroByID() throws InterruptedException{
-		trackingPage.informCodeById("INVALID_TRACKING_CODE");
+		trackingPage.informCodeById(INVALID_TRACKING_CODE);
 		trackingPage.validateInfomrmedCodeByID(INVALID_TRACKING_CODE);
 		trackingPage.clickSearchByID();
 		trackingPage.validateMessageError();
@@ -91,7 +91,7 @@ public class TrackingTest extends BaseTestClass {
 			"Confirm that the code is incorrect and close the browser;")
 	@DisplayName("Busca e valida Cóigo de rastrio por XPATH")
 	public void mustSearchValidZipCodeSelectingOptionLogradouroByXpath() throws InterruptedException {
-		trackingPage.informCodeByXpath(INVALID_TRACKING_CODE );
+		trackingPage.informCodeByXpath("INVALID_TRACKING_CODE");
 		trackingPage.validateInfomrmedCodeByXpath(INVALID_TRACKING_CODE);
 		trackingPage.clickSerachByXpath();
 		trackingPage.validateMessageErrorByXpath();
