@@ -27,8 +27,6 @@ public class DriverFactory {
 			driver = new ChromeDriver(options);
 
 			driver.manage().window().setSize(new Dimension(1200,765));
-
-
 		}
 		return driver;
 	}
