@@ -5,7 +5,7 @@ on:
 
 
 jobs:
-  build:
+  autotests:
     name: Run tests and generate Allure Report
     runs-on: ubuntu-latest
     steps:
