@@ -1,21 +1,35 @@
 name: allure-junit5-maven
 
-on: [ push ]
+on:
+  push:
+ 
 
 jobs:
-  build:
+  autotests:
+    name: Run tests and generate Allure Report
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
 
-      - name: Set up JDK 19
-        uses: actions/setup-java@v2
+      - uses: actions/cache@v1
         with:
-          java-version: '19'
+          path: |
+            ~/.m2/repository
+          key: ${{ runner.os }}-${{ github.workflow }}-${{ hashFiles('**/pom.xml') }}
+          restore-keys: |
+            ${{ runner.os }}-${{ github.workflow }}-
+
+      - name: Set up JDK
+        uses: actions/setup-java@v1
+        with:
+          java-version: 19
+
+      - name: Install dependencies
+        run: mvn dependency:go-offline compile compiler:testCompile
 
       - name: Run Test
         if: always()
-        run: mvn package
+        run: mvn test
         continue-on-error: true
 
       - name: Get Allure history
@@ -29,11 +43,11 @@ jobs:
       - name: Allure Report action from marketplace
         uses: simple-elf/allure-report-action@master
         if: always()
-        id: allure-report
+        #id: allure-report
         with:
-          allure_results: build/allure-results
-          gh_pages: gh-pages
-          allure_report: allure-report
+          allure_results: target/allure-results
+          #gh_pages: gh-pages
+          #allure_report: allure-report
           allure_history: allure-history
 
       - name: Deploy report to Github Pages
@@ -43,13 +57,3 @@ jobs:
           PERSONAL_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           PUBLISH_BRANCH: gh-pages
           PUBLISH_DIR: allure-history
-          
-      - name: Post the link to the report
-  	if: always()
-  	uses: Sibz/github-status-action@v1
-  	with: 
-      	authToken: ${{secrets.GITHUB_TOKEN}}
-      	context: 'Test report'
-      	state: 'success'
-      	sha: ${{ github.event.pull_request.head.sha }}
-      	target_url: simple-elf.github.io/github-allure-history/${{ github.run_number }}
