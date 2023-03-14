@@ -8,7 +8,6 @@ import org.openqa.selenium.TakesScreenshot;
 import java.io.ByteArrayInputStream;
 public class TakeScreenShot {
 
-
     /*
     public static TestName testName = new TestName();
     public static void takeScreenShot() throws IOException {
