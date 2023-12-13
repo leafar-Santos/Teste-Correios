@@ -16,7 +16,8 @@ public class TakeScreenShot {
         Files.copy(evd, new File("screenshots"+File.separator+testName.getMethodName()+".png"));
     }
 */
-    @DisplayName("Evidência do teste")
+    //@DisplayName("Evidência do teste")
+     @DisplayName("Evidência do teste")
     public static void takeScreenShot(){
         Allure.addAttachment("Evidência do teste", new ByteArrayInputStream(((TakesScreenshot) DriverFactory.getDriver()).getScreenshotAs(OutputType.BYTES)));
     }
