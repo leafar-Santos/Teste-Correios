@@ -17,7 +17,7 @@ public class AddressPage extends BasePage {
 
 	/**
 	 * Validações por ID
-	 ** @throws InterruptedException
+
 	 */
 
 	public void informZipCodeById(String ZipCode){
@@ -40,16 +40,19 @@ public class AddressPage extends BasePage {
 		selectOptionComboById(ID_TYPE_ZIP_CODE,COMBO_COMMUNITY_MAIL_BOX_OPTION);
 	}
 	public void selectBigUserOption(){
+
 		selectOptionComboById(ID_TYPE_ZIP_CODE,COMBO_BIG_USER_OPTION);
 	}
 	public void selectOperatingUnitOption(){
+
 		selectOptionComboById(ID_TYPE_ZIP_CODE,COMBO_OPERATING_UNIT_OPTION);
 	}
 	public void selectAllOptions(){
+
 		selectOptionComboById(ID_TYPE_ZIP_CODE,COMBO_ALL_OPTIONS );
 	}
 	public void validateFirstMessageErrorById() throws InterruptedException {
-		sleep(1000);
+		sleep(2000);
 		assertEquals(FIRST_MESSAGE_ERROR,validatesLabelById(ID_FIRST_MESSAGE_RESULT));
 	}
 
@@ -66,7 +69,7 @@ public class AddressPage extends BasePage {
 	/**
 	 *
 	 * Validações por  Css Selector
-	 ** @throws InterruptedException
+
 	 */
 
 
@@ -79,6 +82,7 @@ public class AddressPage extends BasePage {
 	}
 
 	public void clickSearchByCsselector() {
+
 		clickButtonByCssSelector(CSS_BTN_SEARCH);
 	}
 	public void clickNewSearchByCsselector() {
@@ -125,7 +129,6 @@ public class AddressPage extends BasePage {
 
 	/**
 	 * Validações por  XPATH
-	 ** @throws InterruptedException
 	 */
 
 	public void newSearchByXPath() {

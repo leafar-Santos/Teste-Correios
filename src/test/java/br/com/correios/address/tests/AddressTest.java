@@ -21,7 +21,7 @@ public class AddressTest extends BaseTestClass {
 	}
 	/**
 	 * Execução de dos testes e validação por ID
-	 * @throws InterruptedException
+
 	 */
 
 	@Test
@@ -58,7 +58,6 @@ public class AddressTest extends BaseTestClass {
 
 	/**
 	 * Execução de dos testes e validação por CSS SELECTOR
-	 * @throws InterruptedException
 	 */
 
 	@Test
@@ -95,7 +94,7 @@ public class AddressTest extends BaseTestClass {
 
 	/**
 	 * Execução de dos testes e validação por XPATH
-	 * @throws InterruptedException
+
 	 */
 
 	@Test
@@ -133,7 +132,6 @@ public class AddressTest extends BaseTestClass {
 
 	/**
 	 * VAlidação de testes aternativos e validação por ID
-	 * @throws InterruptedException
 	 */
 
 
@@ -191,7 +189,6 @@ public class AddressTest extends BaseTestClass {
 		addresPage.clickSearchById();
 		addresPage.validateFirstMessageErrorById();
 		addresPage.validateSecondMessageErrorByCssSelector();
-
 	}
 
 	@Test

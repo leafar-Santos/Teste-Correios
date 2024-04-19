@@ -22,12 +22,12 @@ public class DriverFactory {
 
 			System.setProperty("webdriver.chrome.driver", "src/test/resources/webdriver/chromedriver");
 			ChromeOptions options = new ChromeOptions();
-			options.setHeadless(true);
+			//options.addArguments("--headless=new");
 			options.addArguments("--disable-extensions");
 			options.addArguments("--disable-gpu");
 			options.addArguments("--no-sandbox");
 			options.addArguments("--remote-allow-origins=*");
-			options.addArguments("--headless");
+			//options.addArguments("--headless");
 			driver = new ChromeDriver(options);
 			driver.manage().window().setSize(new Dimension(1200,765));
 
