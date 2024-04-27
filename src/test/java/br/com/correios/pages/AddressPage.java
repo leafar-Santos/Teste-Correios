@@ -1,5 +1,6 @@
 package br.com.correios.pages;
 import br.com.correios.core.BasePage;
+import br.com.correios.core.DriverFactory;
 import br.com.correios.core.Urls;
 
 import static br.com.correios.pages.dataFieldsPage.DataAddressElements.*;
@@ -52,12 +53,12 @@ public class AddressPage extends BasePage {
 		selectOptionComboById(ID_TYPE_ZIP_CODE,COMBO_ALL_OPTIONS );
 	}
 	public void validateFirstMessageErrorById() throws InterruptedException {
-		sleep(2000);
+		DriverFactory.wait_element();
 		assertEquals(FIRST_MESSAGE_ERROR,validatesLabelById(ID_FIRST_MESSAGE_RESULT));
 	}
 
 	public void validateSecondMessageErrorById() throws InterruptedException {
-		sleep(1000);
+		DriverFactory.wait_element();
 		assertEquals(SECOND_MESSAGE_ERROR,validatesLabelById(ID_SECOND_MESSAGE_RESULT));
 	}
 
@@ -82,10 +83,11 @@ public class AddressPage extends BasePage {
 	}
 
 	public void clickSearchByCsselector() {
-
 		clickButtonByCssSelector(CSS_BTN_SEARCH);
 	}
+
 	public void clickNewSearchByCsselector() {
+
 		clickButtonByCssSelector(CSS_BTN_NEW_SEARCH);
 	}
 
@@ -168,6 +170,7 @@ public class AddressPage extends BasePage {
 		assertEquals(STREERT ,validatesLabelByXpath(XPATH_STREET));
 	}
 	public void validateFirstMessageErroByXpath() throws InterruptedException {
+		DriverFactory.wait_element();
 		assertEquals(FIRST_MESSAGE_ERROR,validatesLabelByXpath(XPATH_FIRST_MESSAGE_ERROR_RESULT));
 	}
 	public void validateSecondMessageErroByXpath() throws InterruptedException {

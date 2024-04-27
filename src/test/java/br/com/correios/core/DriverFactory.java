@@ -9,6 +9,7 @@ import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.remote.http.ClientConfig;
 
 import java.time.Duration;
+import java.util.concurrent.TimeUnit;
 
 public class DriverFactory {
 
@@ -20,16 +21,16 @@ public class DriverFactory {
 
 		if (driver == null) {
 
-			System.setProperty("webdriver.chrome.driver", "src/test/resources/webdriver/chromedriver");
+			System.setProperty("webdriver.chrome.driver", "src/test/resources/webdriver/chromedriver.exe");
 			ChromeOptions options = new ChromeOptions();
-			//options.addArguments("--headless=new");
+			options.addArguments("--headless");
 			options.addArguments("--disable-extensions");
-			options.addArguments("--disable-gpu");
-			options.addArguments("--no-sandbox");
-			options.addArguments("--remote-allow-origins=*");
-			//options.addArguments("--headless");
+        	options.addArguments("--clear-cache");
+			//options.addArguments("--disable-gpu");
+			//options.addArguments("--no-sandbox");
+			//options.addArguments("--remote-allow-origins=*");
 			driver = new ChromeDriver(options);
-			driver.manage().window().setSize(new Dimension(1200,765));
+			driver.manage().window().setSize(new Dimension(1300,1000));
 
 			/*
 			System.setProperty("webdriver.chrome.driver", "src/test/resources/webdriver/chromedriver");
@@ -41,6 +42,10 @@ public class DriverFactory {
 			driver.manage().window().setSize(new Dimension(1200,765)); */
 		}
 		return driver;
+	}
+
+	public static void wait_element(){
+		driver.manage().timeouts().implicitlyWait(1, TimeUnit.SECONDS);
 	}
 
 	public static void killDriver() {

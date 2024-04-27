@@ -1,8 +1,10 @@
 package br.com.correios.address.tests;
 import br.com.correios.address.dataAddressPage.DataAddress;
 import br.com.correios.core.BaseTestClass;
+import br.com.correios.core.DriverFactory;
 import io.qameta.allure.*;
 import br.com.correios.pages.AddressPage;
+import org.junit.After;
 import org.junit.jupiter.api.*;
 
 import static br.com.correios.dataTestes.epics.AddressEpic.createAddressPage;
@@ -10,6 +12,7 @@ import static br.com.correios.dataTestes.histories.AddressHistories.validateAddr
 import static br.com.correios.pages.AddressPage.accessScreenSearchZipCode;
 
 @DisplayName("Performs validations search screen for zip code Post Office")
+@TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 public class AddressTest extends BaseTestClass {
 
 	private static AddressPage addresPage;
@@ -19,12 +22,15 @@ public class AddressTest extends BaseTestClass {
 		addresPage = new AddressPage();
 		accessScreenSearchZipCode();
 	}
+
+
 	/**
 	 * Execução de dos testes e validação por ID
 
 	 */
 
 	@Test
+	@Order(1)
 	@Epic(createAddressPage)
 	@Story(validateAddressScreen)
 	@Description("Validate BY ID"  +
@@ -54,6 +60,7 @@ public class AddressTest extends BaseTestClass {
 		addresPage.validateStreetByXpath();
 		addresPage.validateNeighborhoodByXpath();
 		addresPage.validateStateCityByXpath();
+
 	}
 
 	/**
@@ -61,6 +68,7 @@ public class AddressTest extends BaseTestClass {
 	 */
 
 	@Test
+	@Order(2)
 	@Epic(createAddressPage)
 	@Story(validateAddressScreen)
 	@Severity(SeverityLevel.CRITICAL)
@@ -155,6 +163,7 @@ public class AddressTest extends BaseTestClass {
 	}
 
 	@Test
+	@Order(1)
 	@Epic(createAddressPage)
 	@Story(validateAddressScreen)
 	@Severity(SeverityLevel.NORMAL)
@@ -275,6 +284,7 @@ public class AddressTest extends BaseTestClass {
 	}
 
 	@Test
+	@Order(3)
 	@Epic(createAddressPage)
 	@Story(validateAddressScreen)
 	@Severity(SeverityLevel.BLOCKER)
@@ -331,6 +341,7 @@ public class AddressTest extends BaseTestClass {
 		addresPage.validateStreetByCssSelector();
 		addresPage.validateNeighborhoodCssSelector();
 		addresPage.validateStateCityCssSelector();
+		DriverFactory.killDriver();
 
 
 	}
@@ -354,6 +365,7 @@ public class AddressTest extends BaseTestClass {
 		addresPage.clickSearchByXpath();
 		addresPage.validateFirstMessageErroByXpath();
 		addresPage.validateSecondMessageErroByXpath();
+
 	}
 
 	@Test

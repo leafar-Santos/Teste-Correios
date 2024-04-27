@@ -13,6 +13,7 @@ public class BaseTestClass {
     @DisplayName("Evidência do teste")
     public void screenshoot_test(){
         takeScreenShot();
+        killDriver();
     }
 
     @AfterAll
