@@ -41,7 +41,7 @@ public class AddressTest extends BaseTestClass {
 			"Search for a valid zip code " +
 			"Confirm that the result is: Rua Quinze de Novembro - odd side, São Paulo/SP; " +
 			"Returns to the home screen; ")
-	@DisplayName("Busca e valida CEP por ID")
+	@DisplayName("Deve buscar e validar CEP por ID")
 	@Severity(SeverityLevel.CRITICAL)
 	public void mustSearchValidZipCodeSelectingOptionLogradouroByID() throws InterruptedException {
 		addresPage.informZipCodeById(DataAddress.INVALID_ZIP_CODE);
@@ -80,7 +80,7 @@ public class AddressTest extends BaseTestClass {
 			"Search for a valid zip code " +
 			"Confirm that the result is: Rua Quinze de Novembro - odd side, São Paulo/SP; " +
 			"Returns to the home screen; ")
-	@DisplayName("Busca e valida CEP por CSS Selector")
+	@DisplayName("Deve buscar e validar CEP por CSS Selector")
 	public void mustSearchValidZipCodeSelectingOptionLogradouroByCssSelector() throws InterruptedException {
 		addresPage.informZipCodeByCssSelector(DataAddress.INVALID_ZIP_CODE);
 		addresPage.validateZipCodeInformedByCssSelector(DataAddress.INVALID_ZIP_CODE);
@@ -117,7 +117,7 @@ public class AddressTest extends BaseTestClass {
 			"Search for a valid zip code " +
 			"Confirm that the result is: Rua Quinze de Novembro - odd side, São Paulo/SP; " +
 			"Returns to the home screen; ")
-	@DisplayName("Busca e valida CEP por XPATH")
+	@DisplayName("Deve buscar e validar CEP por XPATH")
 	public void mustSearchValidZipCodeSelectingOptionLogradouroByXpath() throws InterruptedException {
 		addresPage.informZipCodeByXpath(DataAddress.INVALID_ZIP_CODE);
 		addresPage.validateZipCodeInformedByXpath(DataAddress.INVALID_ZIP_CODE);
@@ -151,7 +151,7 @@ public class AddressTest extends BaseTestClass {
 			"Enter a valid zip code; " +
 			"Selects the promotional Zip Code; " +
 			"Click to seek zip code and valid non-existing zip code;")
-	@DisplayName("Busca e valida CEP por ID selecionando CEP Promocional")
+	@DisplayName("Deve buscar e validar CEP por ID selecionando CEP Promocional")
 	public void mustSearchValidZipCodeWithTypePromotionalZipCodeById() throws InterruptedException {
 		addresPage.informZipCodeById(DataAddress.VALID_ZIP_CODE);
 		addresPage.validateZipCodeInformedById(DataAddress.VALID_ZIP_CODE);
@@ -171,7 +171,7 @@ public class AddressTest extends BaseTestClass {
 			"Enter a valid zip code; " +
 			"Selects Community Mailbox Option; " +
 			"Click to seek zip code and valid non-existing zip code;")
-	@DisplayName("Busca e valida CEP por ID selecionando Caixa Postal Comunitária")
+	@DisplayName("Deve buscar e validar CEP por ID selecionando Caixa Postal Comunitária")
 	public void mustSearchValidZipCodeWithCommunityMailboxById()throws InterruptedException {
 		addresPage.informZipCodeById(DataAddress.VALID_ZIP_CODE);
 		addresPage.validateZipCodeInformedById(DataAddress.VALID_ZIP_CODE);
@@ -190,7 +190,7 @@ public class AddressTest extends BaseTestClass {
 			"Enter a valid zip code; " +
 			"Selects BigUser Option Option; " +
 			"Click to seek zip code and valid non-existing zip code;")
-	@DisplayName("Busca e valida CEP por ID selecionando Grande Usuário")
+	@DisplayName("Deve buscar e validar CEP por ID selecionando Grande Usuário")
 	public void mustSearchValidZipCodeSelectingBigUserOptionById() throws InterruptedException {
 		addresPage.informZipCodeById(DataAddress.VALID_ZIP_CODE);
 		addresPage.validateZipCodeInformedById(DataAddress.VALID_ZIP_CODE);
@@ -208,7 +208,7 @@ public class AddressTest extends BaseTestClass {
 			"Enter a valid zip code; " +
 			"Selects Operating Unit Option; " +
 			"Click to seek zip code and valid non-existing zip code;")
-	@DisplayName("Busca e valida CEP por ID selecionando Unidade Operacional")
+	@DisplayName("Deve buscar e validar CEP por ID selecionando Unidade Operacional")
 	public void mustSearchValidZipCodeWithOperatingUnitOptionById() throws InterruptedException {
 		addresPage.informZipCodeById(DataAddress.VALID_ZIP_CODE);
 		addresPage.validateZipCodeInformedById(DataAddress.VALID_ZIP_CODE);
@@ -227,7 +227,7 @@ public class AddressTest extends BaseTestClass {
 			"Enter a valid zip code; " +
 			"Selects Community All Options; " +
 			"Click to seek zip code and valid non-existing zip code;")
-	@DisplayName("Busca e valida CEP por ID selecionando Todas as Opções ")
+	@DisplayName("Deve buscar e validar CEP por ID selecionando Todas as Opções ")
 	public void mustSearchValidZipCodeWithAllOptionsById() throws InterruptedException {
 		addresPage.informZipCodeById(DataAddress.VALID_ZIP_CODE);
 		addresPage.validateZipCodeInformedById(DataAddress.VALID_ZIP_CODE);
@@ -253,7 +253,7 @@ public class AddressTest extends BaseTestClass {
 			"Enter a valid zip code; " +
 			"Selects the promotional Zip Code; " +
 			"Click to seek zip code and valid non-existing zip code;")
-	@DisplayName("Busca e valida CEP por CSS Selector selecionando CEP Promocional")
+	@DisplayName("Deve buscar e validar CEP por CSS Selector selecionando CEP Promocional")
 	public void mustSearchValidZipCodeWithTypePromotionalZipCodeByCssSelector() throws InterruptedException {
 		addresPage.informZipCodeByCssSelector(DataAddress.VALID_ZIP_CODE);
 		addresPage.validateZipCodeInformedByCssSelector(DataAddress.VALID_ZIP_CODE);
@@ -272,7 +272,7 @@ public class AddressTest extends BaseTestClass {
 			"Enter a valid zip code; " +
 			"Selects Community Mailbox Option; " +
 			"Click to seek zip code and valid non-existing zip code;")
-	@DisplayName("Busca e valida CEP por CSS Selector selecionando Caixa Postal Comunitária")
+	@DisplayName("Deve buscar e validar CEP por CSS Selector selecionando Caixa Postal Comunitária")
 	public void mustSearchValidZipCodeWithCommunityMailboxByCssSelector()throws InterruptedException {
 		addresPage.informZipCodeByCssSelector(DataAddress.VALID_ZIP_CODE);
 		addresPage.validateZipCodeInformedByCssSelector(DataAddress.VALID_ZIP_CODE);
@@ -292,7 +292,7 @@ public class AddressTest extends BaseTestClass {
 			"Enter a valid zip code; " +
 			"Selects BigUser Option Option; " +
 			"Click to seek zip code and valid non-existing zip code;")
-	@DisplayName("Busca e valida CEP por CSS Selector selecionando Grande Usuário")
+	@DisplayName("Deve buscar e validar CEP por CSS Selector selecionando Grande Usuário")
 	public void mustSearchValidZipCodeSelectingBigUserOptionByCssSelector() throws InterruptedException {
 		addresPage.informZipCodeByCssSelector(DataAddress.VALID_ZIP_CODE);
 		addresPage.validateZipCodeInformedByCssSelector(DataAddress.VALID_ZIP_CODE);
@@ -313,7 +313,7 @@ public class AddressTest extends BaseTestClass {
 			"Enter a valid zip code; " +
 			"Selects Operating Unit Option; " +
 			"Click to seek zip code and valid non-existing zip code;")
-	@DisplayName("Busca e valida CEP por Css Slector selecionando Unidade Operacional")
+	@DisplayName("Deve buscar e validar CEP por Css Slector selecionando Unidade Operacional")
 	public void mustSearchValidZipCodeWithOperatingUnitOptionByCssSelector() throws InterruptedException {
 		addresPage.informZipCodeByCssSelector(DataAddress.VALID_ZIP_CODE);
 		addresPage.validateZipCodeInformedByCssSelector(DataAddress.VALID_ZIP_CODE);
@@ -332,7 +332,7 @@ public class AddressTest extends BaseTestClass {
 			"Enter a valid zip code; " +
 			"Selects Community All Options; " +
 			"Click to seek zip code and valid non-existing zip code;")
-	@DisplayName("Busca e valida CEP por ID selecionando Todas as Opções")
+	@DisplayName("Deve buscar e validar CEP por ID selecionando Todas as Opções")
 	public void mustSearchValidZipCodeWithAllOptionsByCssSelector() throws InterruptedException {
 		addresPage.informZipCodeByCssSelector(DataAddress.VALID_ZIP_CODE);
 		addresPage.validateZipCodeInformedByCssSelector(DataAddress.VALID_ZIP_CODE);
@@ -357,7 +357,7 @@ public class AddressTest extends BaseTestClass {
 			"Enter a valid zip code; " +
 			"Selects the promotional Zip Code; " +
 			"Click to seek zip code and valid non-existing zip code;")
-	@DisplayName("Busca e valida CEP por XPATH selecionando CEP Promocional")
+	@DisplayName("Deve buscar e validar CEP por XPATH selecionando CEP Promocional")
 	public void mustSearchValidZipCodeWithTypePromotionalZipCodeByXpath() throws InterruptedException {
 		addresPage.informZipCodeByXpath(DataAddress.VALID_ZIP_CODE);
 		addresPage.validateZipCodeInformedByXpath(DataAddress.VALID_ZIP_CODE);
@@ -376,7 +376,7 @@ public class AddressTest extends BaseTestClass {
 			"Enter a valid zip code; " +
 			"Selects Community Mailbox Option; " +
 			"Click to seek zip code and valid non-existing zip code;")
-	@DisplayName("Busca e valida CEP por XPATH selecionando Caixa Postal Comunitária")
+	@DisplayName("Deve buscar e validar CEP por XPATH selecionando Caixa Postal Comunitária")
 	public void mustSearchValidZipCodeWithCommunityMailboxByXpath()throws InterruptedException {
 		addresPage.informZipCodeByXpath(DataAddress.VALID_ZIP_CODE);
 		addresPage.validateZipCodeInformedByXpath(DataAddress.VALID_ZIP_CODE);
@@ -395,7 +395,7 @@ public class AddressTest extends BaseTestClass {
 			"Enter a valid zip code; " +
 			"Selects BigUser Option Option; " +
 			"Click to seek zip code and valid non-existing zip code;")
-	@DisplayName("Busca e valida CEP por XPATH selecionando Grande Usuário")
+	@DisplayName("Deve buscar e validar CEP por XPATH selecionando Grande Usuário")
 	public void mustSearchValidZipCodeSelectingBigUserOptionByXpath() throws InterruptedException {
 		addresPage.informZipCodeById(DataAddress.VALID_ZIP_CODE);
 		addresPage.validateZipCodeInformedByXpath(DataAddress.VALID_ZIP_CODE);
@@ -414,7 +414,7 @@ public class AddressTest extends BaseTestClass {
 			"Enter a valid zip code; " +
 			"Selects Operating Unit Option; " +
 			"Click to seek zip code and valid non-existing zip code;")
-	@DisplayName("Busca e valida CEP por XPATH selecionando Unidade Operacional")
+	@DisplayName("Deve buscar e validar CEP por XPATH selecionando Unidade Operacional")
 	public void mustSearchValidZipCodeWithOperatingUnitOptionByXpath() throws InterruptedException {
 		addresPage.informZipCodeById(DataAddress.VALID_ZIP_CODE);
 		addresPage.validateZipCodeInformedByXpath(DataAddress.VALID_ZIP_CODE);
@@ -433,7 +433,7 @@ public class AddressTest extends BaseTestClass {
 			"Enter a valid zip code; " +
 			"Selects Community All Options; " +
 			"Click to seek zip code and valid non-existing zip code;")
-	@DisplayName("Busca e valida CEP por XPATH selecionando Todos")
+	@DisplayName("Deve buscar e validar CEP por XPATH selecionando Todos")
 	public void mustSearchValidZipCodeWithAllOptionsByXpath() throws InterruptedException {
 		addresPage.informZipCodeById(DataAddress.VALID_ZIP_CODE);
 		addresPage.validateZipCodeInformedByXpath(DataAddress.VALID_ZIP_CODE);
