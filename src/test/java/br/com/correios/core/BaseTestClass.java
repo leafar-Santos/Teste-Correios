@@ -2,7 +2,6 @@ package br.com.correios.core;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.DisplayName;
-import java.io.IOException;
 
 import static br.com.correios.core.DriverFactory.killDriver;
 import static br.com.correios.utils.TakeScreenShot.takeScreenShot;
