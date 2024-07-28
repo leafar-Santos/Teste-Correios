@@ -23,7 +23,7 @@ public class DriverFactory {
 
 			System.setProperty("webdriver.chrome.driver", "src/test/resources/webdriver/chromedriver.exe");
 			ChromeOptions options = new ChromeOptions();
-			options.addArguments("--headless");
+			//options.addArguments("--headless");
 			options.addArguments("--disable-extensions");
         	options.addArguments("--clear-cache");
 			//options.addArguments("--disable-gpu");
