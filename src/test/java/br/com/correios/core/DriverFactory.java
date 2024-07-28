@@ -21,7 +21,9 @@ public class DriverFactory {
 
 		if (driver == null) {
 
-			System.setProperty("webdriver.chrome.driver", "src/test/resources/webdriver/chromedriver");
+			System.setProperty("webdriver.chrome.driver", "src//testresources//webdriver//chromedriver");
+
+
 			ChromeOptions options = new ChromeOptions();
 			options.addArguments("--headless");
 			options.addArguments("--disable-extensions");
