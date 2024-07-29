@@ -21,7 +21,8 @@ public class DriverFactory {
 
 		if (driver == null) {
 
-			System.setProperty("webdriver.chrome.driver", "src\\test\\resources\\webdriver\\chromedriver");
+			System.setProperty("webdriver.chrome.driver", "webdriver/chromedriver");
+
 
 			ChromeOptions options = new ChromeOptions();
 			options.addArguments("--headless");
@@ -32,6 +33,7 @@ public class DriverFactory {
 			//options.addArguments("--remote-allow-origins=*");
 			driver = new ChromeDriver(options);
 			driver.manage().window().setSize(new Dimension(1300,1000));
+
 
 		}
 		return driver;
