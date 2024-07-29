@@ -21,12 +21,10 @@ public class DriverFactory {
 
 		if (driver == null) {
 
-			System.setProperty("webdriver.chrome.driver", "src/test/resources/webdriver/chromedriver");
-
-
+			System.setProperty("webdriver.chrome.driver", "src\\test\\resources\\webdriver\\chromedriver");
 
 			ChromeOptions options = new ChromeOptions();
-			//options.addArguments("--headless");
+			options.addArguments("--headless");
 			options.addArguments("--disable-extensions");
         	options.addArguments("--clear-cache");
 			//options.addArguments("--disable-gpu");
@@ -35,14 +33,6 @@ public class DriverFactory {
 			driver = new ChromeDriver(options);
 			driver.manage().window().setSize(new Dimension(1300,1000));
 
-			/*
-			System.setProperty("webdriver.chrome.driver", "src/test/resources/webdriver/chromedriver");
-			ChromeOptions options = new ChromeOptions();
-			options.setHeadless(true);
-			options.addArguments("--remote-allow-origins=*");
-			driver = new ChromeDriver(options);
-
-			driver.manage().window().setSize(new Dimension(1200,765)); */
 		}
 		return driver;
 	}
