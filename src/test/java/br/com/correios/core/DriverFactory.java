@@ -16,7 +16,7 @@ public class DriverFactory {
 
 		if (driver == null) {
 
-			System.setProperty("webdriver.chrome.driver", "src/test/resources/webdriver/chromedriver");
+			System.setProperty("webdriver.chrome.driver", "src/test/resources/webdriver/chromedriver_atual");
 
 
 			ChromeOptions options = new ChromeOptions();
