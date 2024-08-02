@@ -23,6 +23,7 @@ public class TrackingTest extends BaseTestClass {
 	/**
      * Execução de dos testes e validação por ID
 	 */
+
 	@Epic(createTrakingPage)
 	@Feature("Adding two values")
 	@Story(validateTrackingScreen)
@@ -74,6 +75,7 @@ public class TrackingTest extends BaseTestClass {
 	/**
 	 * Execução de dos testes e validação por XPATH
 	 */
+
 
 	@Epic(createTrakingPage)
 	@Feature("Adding two values")

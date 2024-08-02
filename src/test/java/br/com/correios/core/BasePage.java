@@ -14,6 +14,10 @@ public class BasePage {
      *Methots By ID
      */
 
+    public void clickById(String idElemento) {
+       getDriver().findElement(By.id(idElemento)).click();
+    }
+
     public void wiriteById(String idElemento, String texto) {
         getDriver().findElement(By.id(idElemento)).sendKeys(texto);
     }
@@ -46,6 +50,8 @@ public class BasePage {
     public void wiriteByCssSelector(String cssElemento, String texto) {
         getDriver().findElement(By.cssSelector(cssElemento)).sendKeys(texto);
     }
+
+
     public String validateLabelByCssSelector(String css) throws InterruptedException {
         sleep(1000);
         return getDriver().findElement(By.cssSelector(css)).getText().toString();
@@ -94,6 +100,13 @@ public class BasePage {
         Select combo = new Select(elemento);
         combo.selectByVisibleText(visibleText);
         assertEquals(visibleText, combo.getFirstSelectedOption().getText());
+    }
+
+
+    //Métodos by ClassName
+    public String validateLabelByClass(String classElemento) throws InterruptedException {
+        sleep(1000);
+        return getDriver().findElement(By.className(classElemento)).getText().toString();
     }
 
 

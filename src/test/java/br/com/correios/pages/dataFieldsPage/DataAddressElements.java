@@ -5,6 +5,7 @@ public class DataAddressElements {
     public static String ID_ADRESS_FIELD = "endereco";
     public static String ID_BTN_NEW_SEARCH = "btn_nbusca";
 
+
     public static String ID_BTN_SEARCH = "btn_pesquisar";
     public static String ID_FIRST_MESSAGE_RESULT = "mensagem-resultado";
     public static String ID_SECOND_MESSAGE_RESULT = "mensagem-resultado-alerta";
@@ -13,6 +14,8 @@ public class DataAddressElements {
     public static String CSS_SELECTOR_NEIGHBORHOOD ="#resultado-DNEC > tbody > tr > td:nth-child(2)";
     public static String CSS_SELECTOR_STATE_COUNTRY ="#resultado-DNEC > tbody > tr > td:nth-child(3)";
 
+    public static String CLASS_TOAST_ALERT = "msg";
+    public static String CLASS_HINT_ALERT = "mensagem";
 
     public static String CSS_BTN_SEARCH = "#btn_pesquisar";
     public static String CSS_TYPE_ZIP_CODE = "#tipoCEP";

@@ -4,6 +4,7 @@ public class DataAddressPage {
 
     public static String FIRST_MESSAGE_ERROR = "Não há dados a serem exibidos";
     public static String SECOND_MESSAGE_ERROR = "Dados não encontrado";
+    public static String TOAST_MESSAGE_ERROR = "Preencha o campo Captcha! (texto contido na imagem)";
     public static String STREERT = "Rua Quinze de Novembro - lado ímpar";
     public static String NEIGHBORHOOD = "Centro";
     public static String CITY_STATE = "São Paulo/SP";

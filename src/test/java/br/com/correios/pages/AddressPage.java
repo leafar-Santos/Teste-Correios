@@ -62,6 +62,7 @@ public class AddressPage extends BasePage {
 		assertEquals(SECOND_MESSAGE_ERROR,validatesLabelById(ID_SECOND_MESSAGE_RESULT));
 	}
 
+
 	public void newSearchById() {
 		clickButtonoByID(ID_BTN_NEW_SEARCH);
 	}
@@ -178,7 +179,6 @@ public class AddressPage extends BasePage {
 	}
 	public void validateNeighborhoodByXpath() throws InterruptedException {
 		assertEquals(NEIGHBORHOOD,validatesLabelByXpath(XPATH_NEIGHBORHOOD));
-
 	}
 	public void validateStateCityByXpath() throws InterruptedException {
 		assertEquals(CITY_STATE,validatesLabelByXpath(XPATH_STATE_COUNTRY));
@@ -187,6 +187,15 @@ public class AddressPage extends BasePage {
 	public void clickSearchByXpath() {
 		clickButtonByXpath(XPATH_BTN_SEARCH);
 	}
+
+
+	//Validade by ClassNAme
+
+	public void validateToastMessageErrorByClassName() throws InterruptedException {
+		DriverFactory.wait_element();
+		assertEquals(TOAST_MESSAGE_ERROR,validateLabelByClass(CLASS_TOAST_ALERT));
+	}
+
 
 
 
