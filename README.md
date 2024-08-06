@@ -11,28 +11,20 @@
   <figcaption>Gráficos para análises</figcaption>
 </figure>
 
-<strong>Apache Maven 3.6.3</strong>
-Instalar maven no linux:
+<ol>
+<li><strong>Apache Maven 3.6.3</strong></li>
+    sudo apt install maven
 
-sudo apt install maven
+<li><strong>NPM 8.5.1</strong></li>
+    sudo apt-get install npm
 
-<strong>NPM 8.5.1</strong>
-
-<strong>Instalar npm no linux</strong>
-
-sudo apt-get install npm
-
-<strong>Instalar allure no linux:</strong>
-
-Allure 2.21.1
-
-<strong>Allure requires Java 8 or higher</strong>
-
+<li><strong>Allure 2.22.0</strong></li>
+<strong>Obs.: </strong>Allure requires Java 8 or higher</br>
 npm install -g allure-commandline --save-dev
 
-<strong>Propriedades necessárias para configuração do projeto, inserir no properties.</strong>
-
-<aspectj.version>1.9.4</aspectj.version>
+<li><strong>Propriedades necessárias para configuração do projeto, inserir no properties.</strong></li>
+<code>aspectj.version>1.9.4</aspectj.version></code>
+</ol>
 
 
 <strong>Bibliotecas necessárias para a execução  do projeto</strong>
@@ -83,15 +75,30 @@ npm install -g allure-commandline --save-dev
             <version>1.9.2</version>
         </dependency>
 
-<strong>Para executar o projeto, no terminal digite:</strong>
 
+<ol>
+<li><strong>Executando projeto</strong></li>
+Para executar o projeto, no terminal digite:</br>
 mvn clean test
 
-<strong>Para visualizar report, no terminal digite:</strong>
-
+<li><strong>Gerar o relatório</strong></li>
+Para visualizar report, no terminal digite:</br>
 allure generate
 
-<strong>Em seguida digite:</strong>
+<li><strong>Abrir relatório</strong></li>
+Em seguida digite: allure open
+</ol>
 
-allure open
+
+
+
+
+
+
+
+
+
+
+
+
 			
