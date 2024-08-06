@@ -1,34 +1,43 @@
 # Projeto de testes com Integraçao com Jenkins e Allure Reports
 
-#Apache Maven 3.6.3
+<p>Veja como usar implementar os testes e o Allure nos passos após as imagens.</p>
 
+<figure>
+  <img src="src/img/allure_01.png"/>
+</figure>
+
+<figure>
+  <img src="src/img/allure_02.png"/>
+  <figcaption>Gráficos para análises</figcaption>
+</figure>
+
+<strong>Apache Maven 3.6.3</strong>
 Instalar maven no linux:
 
 sudo apt install maven
 
-#NPM 8.5.1
+<strong>NPM 8.5.1</strong>
 
-Instalar npm no linux
+<strong>Instalar npm no linux</strong>
 
 sudo apt-get install npm
 
-#Allure 2.21.1
+<strong>Instalar allure no linux:</strong>
 
-Instalar allure no linux:
+Allure 2.21.1
 
-Allure requires Java 8 or higher
+<strong>Allure requires Java 8 or higher</strong>
 
 npm install -g allure-commandline --save-dev
 
+<strong>Propriedades necessárias para configuração do projeto, inserir no properties.</strong>
 
-#Propriedades necessárias para configuração do projeto, inserir no properties.
+<aspectj.version>1.9.4</aspectj.version>
 
- <aspectj.version>1.9.4</aspectj.version>
 
- 
-#Bibliotecas necessárias para a execução  do projeto
+<strong>Bibliotecas necessárias para a execução  do projeto</strong>
 
-      <dependency>
+    <dependency>
             <groupId>io.qameta.allure</groupId>
             <artifactId>allure-junit5</artifactId>
             <version>2.21.0</version>
@@ -73,15 +82,16 @@ npm install -g allure-commandline --save-dev
             <artifactId>junit-platform-runner</artifactId>
             <version>1.9.2</version>
         </dependency>
-				
-#Para executar o projeto, no terminal digite: 
+
+<strong>Para executar o projeto, no terminal digite:</strong>
+
 mvn clean test
 
-#Para visualizar report, no terminal digite:
+<strong>Para visualizar report, no terminal digite:</strong>
 
 allure generate
 
-Em seguida digite:
+<strong>Em seguida digite:</strong>
 
 allure open
 			
