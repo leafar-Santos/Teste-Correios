@@ -1,4 +1,4 @@
-# Projeto de testes com Integraçao com Jenkins e Allure Reports
+# Projeto de testes Web Selenium, Java 21, Junit 5, com Integraçao com git Actions e com Allure Reports.
 
 <p>Veja como usar implementar os testes e o Allure nos passos após as imagens.</p>
 
