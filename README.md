@@ -23,7 +23,7 @@
 npm install -g allure-commandline --save-dev
 
 <li><strong>Propriedades necessárias para configuração do projeto, inserir no properties.</strong></li>
-<code>aspectj.version>1.9.4</aspectj.version></code>
+
 </ol>
 
 

@@ -42,41 +42,41 @@
     <dependency>
     <groupId>org.junit.jupiter</groupId>
         <artifactId>junit-jupiter-api</artifactId>
-        <version>5.10.2</version>
+        <version>5.11.0</version>
         <scope>test</scope>
     </dependency>
 
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter-engine</artifactId>
-            <version>5.10.2</version>
+            <version>5.11.0</version>
         </dependency>
 
 
         <dependency>
             <groupId>org.hamcrest</groupId>
             <artifactId>hamcrest</artifactId>
-            <version>2.2</version>
+            <version>3.0</version>
         </dependency>
 
 
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
             <artifactId>selenium-java</artifactId>
-             <version>4.23.0</version>
+             <version>4.23.1</version>
         </dependency>
 
         <!-- Dependencias JUnit4 -->
         <dependency>
             <groupId>org.junit.vintage</groupId>
             <artifactId>junit-vintage-engine</artifactId>
-            <version>5.9.2</version>
+            <version>5.11.0</version>
         </dependency>
 
         <dependency>
             <groupId>org.junit.platform</groupId>
             <artifactId>junit-platform-runner</artifactId>
-            <version>1.9.2</version>
+            <version>1.11.0</version>
         </dependency>
 
 
